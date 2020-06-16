@@ -18,11 +18,9 @@ from math import sqrt
 
 
 def mean_quadratic_deviation(data):
-    '''
+    """
     Среднее квадратичное отклонение данных из переданного списка.
-    :param data:
-    :return:
-    '''
+    """
 
     m_q_deviation = sqrt(dispersion(data))
 
@@ -30,11 +28,9 @@ def mean_quadratic_deviation(data):
 
 
 def dispersion(data):
-    '''
+    """
     Дисперсия данных из переданного списка.
-    :param data:
-    :return:
-    '''
+    """
 
     data_average = average(data)
 
@@ -46,11 +42,9 @@ def dispersion(data):
 
 
 def average(data):
-    '''
+    """
      Среднее значение данных из переданного списка.
-    :param data:
-    :return: average
-    '''
+    """
 
     sum_data = sum(data)
     count_data = len(data)
@@ -61,6 +55,10 @@ def average(data):
 
 
 def csv_reader(file_csv, col_num):
+    """
+    Функция для считывания данных из csv файла.
+    """
+
     reader = csv.reader(file_csv, delimiter=';')
     data = []
     for line in reader:
